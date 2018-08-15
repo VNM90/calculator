@@ -24,37 +24,37 @@ window.counterInc = () => store.dispatch(incAction())
 window.counterDec = () => store.dispatch(decAction())
 
 // automatic testing
-const getDiplayedVal = () => {
-    const state = store.getState().calculator
+// const getDiplayedVal = () => {
+//     const state = store.getState().calculator
   
-    return state.isResultShown ? state.result : state.input
-  }
+//     return state.isResultShown ? state.result : state.input
+//   }
   
-  store.dispatch(inputAction(6))
-  if (getDiplayedVal() !== 6) {
-    throw new Error('Input not works! Should be 6!')
-  }
-  store.dispatch(inputAction(7))
-  if (getDiplayedVal() !== 67) {
-    throw new Error('Input not works! Should be 67!')
-  }
-  store.dispatch(inputAction(3))
-  if (getDiplayedVal() !== 673) {
-    throw new Error('Input not works! Should be 673!')
-  }
+//   store.dispatch(inputAction(6))
+//   if (getDiplayedVal() !== 6) {
+//     throw new Error('Input not works! Should be 6!')
+//   }
+//   store.dispatch(inputAction(7))
+//   if (getDiplayedVal() !== 67) {
+//     throw new Error('Input not works! Should be 67!')
+//   }
+//   store.dispatch(inputAction(3))
+//   if (getDiplayedVal() !== 673) {
+//     throw new Error('Input not works! Should be 673!')
+//   }
   
-  store.dispatch(addCalculatorAction())
-  if (getDiplayedVal() !== 673) {
-    throw new Error('Add not works! Should be 673!')
-  }
-  store.dispatch(inputAction(3))
-  if (getDiplayedVal() !== 3) {
-    throw new Error('Input not works! Should be 3!')
-  }
-  store.dispatch(addCalculatorAction())
-  if (getDiplayedVal() !== 676) {
-    throw new Error('Add not works! Should be 676!')
-  }
+//   store.dispatch(addCalculatorAction())
+//   if (getDiplayedVal() !== 673) {
+//     throw new Error('Add not works! Should be 673!')
+//   }
+//   store.dispatch(inputAction(3))
+//   if (getDiplayedVal() !== 3) {
+//     throw new Error('Input not works! Should be 3!')
+//   }
+//   store.dispatch(addCalculatorAction())
+//   if (getDiplayedVal() !== 676) {
+//     throw new Error('Add not works! Should be 676!')
+//   }
 
 //function in widnow are only for manual testing
 window.inputAction = (number) => store.dispatch(inputAction(number))
